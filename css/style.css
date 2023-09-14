@@ -1,0 +1,543 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+:root {
+    --main-color: #484848;
+    --black-color: #000;
+    --white-color: #fff;
+    --box-color: #F7F7F7;
+    --hover-color: #fa7070;
+    --paragraph-color: #737b9a;
+    --title-color: #212529;
+    --link-color: #5b5b98;
+    --optional-Color: #fa7070;
+    --yello-color: #ffa143;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+.pb-70 {
+    padding-bottom: 70px;
+}
+
+.pt-70 {
+    padding-bottom: 70px;
+}
+
+body {
+    font-family: 'Oswald' !important;
+}
+
+.camping-guides {
+    background-image: url('../img/h5-rev-img-01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 85vh;
+}
+
+.camping-content {
+    bottom: 30%;
+}
+
+.camping-guides h1 {
+    font-size: 59px;
+    width: 700;
+    line-height: 65px;
+}
+
+.logo img {
+    width: 250px;
+    height: 150px;
+    margin-top: -7%;
+    z-index: 1;
+}
+
+header .navbar-brand {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.drop-down {
+    position: relative;
+    z-index: 1;
+}
+
+.sub-manu {
+    position: absolute;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 14px;
+    width: 160px;
+    top: 50px;
+    padding: 25px 10px;
+    visibility: hidden;
+    opacity: 0px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    height: 0px;
+    overflow: hidden;
+}
+
+.drop-down:hover .sub-manu {
+    visibility: visible;
+    opacity: 0px;
+    transition: .5s ease;
+    height: 216px;
+}
+
+.sub-manu li {
+    padding: 5px 0px;
+    list-style: none;
+}
+
+.sub-manu li a {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    display: block;
+    line-height: 1.5rem;
+    text-decoration: none !important;
+    position: relative;
+}
+
+.sub-manu li a:hover {
+    color: #59815b !important;
+}
+
+.sub-manu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    transition: 0.5s;
+    height: 1px;
+    background-color: #59815b;
+}
+
+.sub-manu li a:hover::after {
+    width: 100%;
+}
+
+.mkdf-st-button {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin-top: 29px;
+    overflow: hidden;
+}
+
+.mkdf-st-button .mkdf-btn {
+    color: #fff;
+    background-color: #59815b;
+    padding: 10px 40px;
+}
+
+.mkdf-st-button .mkdf-btn:hover {
+    color: #fff !important;
+    background-color: #59815b;
+}
+
+.mkdf-st-button .mkdf-btn span {
+    display: inline-block;
+    transition: .3s;
+}
+
+.mkdf-st-button .mkdf-btn i:nth-child(2) {
+    position: absolute !important;
+    transition: .3s;
+    left: 44%;
+    top: calc(50% - 7px);
+    transform: translateX(-800%);
+}
+
+.mkdf-st-button .mkdf-btn:hover i:nth-child(2) {
+    transform: translateX(0);
+    transition: .3s .2s;
+    z-index: 1;
+}
+
+.mkdf-st-button .mkdf-btn:hover i {
+    transform: translateX(400%);
+    transition: .3s .2s;
+}
+
+.mkdf-st-button .mkdf-btn::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #3c553a84;
+    transform: translateX(-102%);
+    transform-origin: left;
+    transition: .4s cubic-bezier(.18, .24, .18, .89);
+}
+
+.mkdf-st-button .mkdf-btn:hover::after {
+    transform: translateX(0%);
+    transition: .4s .2s;
+    width: 100%;
+}
+
+.exploring-img {
+    position: relative;
+}
+
+.exploring-img img {
+    height: 80vh;
+    max-width: 100%;
+
+}
+
+.mkdf-team-text-wrapper {
+    position: absolute;
+    bottom: 40px;
+    right: 70px;
+    text-align: center;
+    z-index: 1;
+    transform: translateZ(0);
+    background-color: #000;
+}
+
+.mkdf-team-text-outer {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+}
+
+.mkdf-team-text-inner {
+    position: relative;
+    display: table-cell;
+}
+
+.mkdf-team-text-background {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    padding: 25px 30px;
+    box-sizing: border-box;
+}
+
+.mkdf-team-text-background svg.mkdf-active-hover-left {
+    right: 100%;
+}
+
+.mkdf-team-text-background svg {
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.mkdf-team-text-background svg.mkdf-active-hover-right {
+    left: 100%;
+}
+
+svg.mkdf-active-hover-left {
+    left: -3.2em !important;
+}
+
+.mkdf-team-text-background svg {
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.img-caption {
+    margin: 3px 6px;
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* blog post */
+
+.blog-post .blog-title p {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.card {
+    border-radius: 0 !important;
+    border: none !important;
+    overflow: hidden;
+}
+
+.card img {
+    border-radius: 0;
+    transition: .5s;
+}
+
+.card img:hover {
+    transform: scale(1.2);
+}
+
+.card .card-body p {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 17px;
+}
+
+.card .card-body p a {
+    text-decoration: none;
+    position: relative;
+}
+
+.card .card-body a:hover {
+    color: #59815b !important;
+}
+
+.card .card-body a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    transition: 0.5s;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+.card .card-body a:hover::after {
+    width: 100%;
+}
+
+.card .card-body .card-title {
+    position: relative;
+}
+
+.card .card-body .card-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    transition: 0.5s;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+.card .card-body .card-title:hover::after {
+    width: 100%;
+}
+
+/* travel-list  */
+
+.travel-pic p {
+    font-size: 18px;
+}
+
+.travel-pic .img-2 {
+    display: none;
+    transition: .5s;
+
+}
+
+.travel-pic:hover .img-2 {
+    display: block;
+    transform: translatey(-5px);
+    transition: .5S;
+}
+
+.travel-pic:hover .img-1 {
+    display: none;
+}
+
+/* map  */
+.pop {
+    z-index: 999;
+}
+
+/* travel tips  */
+.tips-img {
+    overflow: hidden;
+}
+
+.tips-img img {
+    transition: .5s;
+}
+
+.tips-img img:hover {
+    transition: .5s;
+    transform: scale(1.2);
+}
+
+.tips-title p {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 17px;
+}
+
+.tips-content .tips-caption:hover {
+    color: #59815b !important;
+}
+
+.tips-content .tips-caption a {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-decoration: none;
+    position: relative;
+}
+
+.tips-content .tips-caption a:hover {
+    color: #59815b !important;
+}
+
+.tips-content .tips-caption a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    transition: 0.5s;
+    height: 1px;
+    background-color: #59815b;
+}
+
+.tips-content .tips-caption a:hover::after {
+    width: 100%;
+}
+
+.tips-content h3 a {
+    position: relative;
+    text-decoration: none;
+}
+
+.tips-content h3 a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    transition: 0.5s;
+    height: 1px;
+    background-color: #000;
+}
+
+.tips-content h3 a:hover::before {
+    width: 100%;
+}
+
+.tips-content p {
+    font-size: 17px;
+    word-spacing: 5px;
+    line-height: 1.5rem;
+}
+
+/* newsletter */
+.newsletter {
+    background-image: url('../img/h5-bckg-img-02.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* vertical-align: baseline; */
+    /* position: relative; */
+}
+
+.letter-book {
+    top: 20%;
+}
+
+.lettet-content {
+    bottom: 25%;
+}
+
+.letter-caption {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.lettet-content input {
+    background-color: white;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+}
+
+/* footer  */
+footer .footer-logo img {
+    width: 80%;
+}
+
+.footer-caption p {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 26px;
+}
+
+.footer-last .footer-box p {
+    font-size: 18px;
+}
+
+.footer-last .subscribe input {
+    outline: none;
+    padding: 10px 10px;
+    border-right: none;
+    border-top: none;
+}
+
+.recent-news p span {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #59815b;
+    cursor: pointer;
+}
+
+.recent-news p span:hover {
+    color: black;
+}
+
+.recent-news p a {
+    text-decoration: none;
+    position: relative;
+}
+
+.recent-news p a:hover {
+    color: black !important;
+}
+
+.recent-news p a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    transition: 0.5s;
+    height: 1px;
+    background-color: black;
+}
+
+.recent-news p a:hover::after {
+    width: 100%;
+}
+
+.instagram .insta-img:hover {
+    opacity: 0.6;
+    background-color: #000;
+}
+
+/* -------------------------------------------------------------  */
+/* .box{
+    font-size: 35px;
+    display: inline;
+    color: black;
+    background-color: yellow;
+    clip-path: polygon(11% 27%, 3% 30%, 2% 40%, 3% 45%, 3% 48%, 5% 53%, 6% 56%, 4% 60%, 2% 62%, 5% 65%, 12% 68%, 19% 68%, 96% 67%, 96% 63%, 93% 61%, 92% 58%, 93% 54%, 94% 51%, 94% 46%, 89% 39%, 89% 37%, 90% 34%, 92% 33%, 93% 31%, 95% 29%, 96% 26%, 97% 25%);
+    clpip-path: polygon(10% 33%, 6% 38%, 6% 42%, 6% 46%, 5% 48%, 8% 52%, 6% 54%, 5% 59%, 2% 61%, 99% 59%, 100% 60%, 100% 60%, 99% 57%, 98% 56%, 97% 53%, 98% 48%, 98% 45%, 97% 44%, 97% 41%, 98% 38%, 99% 36%, 98% 34%, 97% 34%, 98% 32%);
+    cli-path: polygon(1% 27%, 99% 27%, 97% 39%, 100% 51%, 98% 68%, 0 68%, 2% 59%, 0 51%, 1% 41%, 0 35%);
+    clip-path: polygon(3% 37%, 0 45%, 3% 53%, 2% 62%, 0 72%, 98% 71%, 100% 63%, 96% 57%, 100% 49%, 98% 39%, 100% 30%, 0 30%);
+} */
